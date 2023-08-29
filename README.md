@@ -6,6 +6,11 @@ In addition, this module provides WHOIS lookup api that helps users to obtain do
 
 This module requires API key to function. You may sign up for a free API key at https://www.ip2location.io/pricing.
 
+Developer Documentation
+=====================
+
+To learn more about installation, usage, and code examples, please visit the developer documentation at [https://ip2location-io-deno.readthedocs.io/en/latest/index.html](https://ip2location-io-deno.readthedocs.io/en/latest/index.html).
+
 LICENCE
 =====================
 See the LICENSE file.
