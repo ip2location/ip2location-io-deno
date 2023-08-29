@@ -36,7 +36,7 @@ export class IPGeolocation {
   lookup(myIP, lang) {
     let data = {
       format: "json",
-      source: "sdk-nodejs-iplio",
+      source: "sdk-deno-iplio",
       source_version: this.#configuration.getVersion(),
       key: this.#configuration.getApiKey(),
       ip: myIP,
