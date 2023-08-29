@@ -44,7 +44,7 @@ myst_enable_extensions = [
 myst_html_meta = {
     "description": "IP2Location.io Deno SDK allows user to query for an enriched data set based on IP address and provides WHOIS lookup api that helps users to obtain domain information.",
     "keywords": "IP2Location, Geolocation, IP location, Deno, WHOIS, domain",
-    # "google-site-verification": "DeW6mXDyMnMt4i61ZJBNuoADPimo5266DKob7Z7d6i4",
+    "google-site-verification": "DeW6mXDyMnMt4i61ZJBNuoADPimo5266DKob7Z7d6i4",
 }
 
 # templates_path = ['_templates']
