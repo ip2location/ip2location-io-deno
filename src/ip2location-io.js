@@ -5,7 +5,7 @@ import punycode from "npm:punycode@2.3.0";
 
 // Configuration class
 export class Configuration {
-  #version = "1.0.0";
+  #version = "1.1.0";
   #apiKey = "";
 
   constructor(key) {
@@ -2040,6 +2040,65 @@ export class DomainWhois {
 
     let ext = domain.substring(domain.indexOf("."));
     return ext;
+  }
+}
+
+// IP2Location.io API query class
+export class HostedDomain {
+  #configuration = null;
+  #baseUrl = "https://domains.ip2whois.com/domains";
+
+  constructor(config) {
+    this.#configuration = config;
+  }
+
+  // Query API to get geolocation information by IP address
+  lookup(myIP, page) {
+    let data = {
+      format: "json",
+      source: "sdk-deno-iplio",
+      source_version: this.#configuration.getVersion(),
+      key: this.#configuration.getApiKey(),
+      ip: myIP,
+    };
+    if (page) {
+      data.page = page;
+    }
+
+    let url = this.#baseUrl + "?";
+
+    Object.keys(data).forEach(function (key, index) {
+      if (this[key] != "") {
+        url += key + "=" + encodeURIComponent(this[key]) + "&";
+      }
+    }, data);
+
+    url = url.substring(0, url.length - 1);
+
+    const lookupPromise = new Promise((resolve, reject) => {
+      let d = "";
+      let req = https.get(url, function (res) {
+        res.on("data", (chunk) => (d = d + chunk));
+        res.on("end", function () {
+          if (res.statusCode == 200) {
+            resolve(JSON.parse(d));
+          } else if (res.statusCode == 400 || res.statusCode == 401) {
+            if (d.includes("error_message")) {
+              reject(new Error(JSON.parse(d).error.error_message));
+            } else {
+              reject(new Error(d));
+            }
+          } else {
+            reject(new Error(d));
+          }
+        });
+      });
+
+      req.on("error", function (e) {
+        reject(new Error(e));
+      });
+    });
+    return lookupPromise;
   }
 }
 
