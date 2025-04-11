@@ -2043,7 +2043,7 @@ export class DomainWhois {
   }
 }
 
-// IP2Location.io API query class
+// Hosted Domain API query class
 export class HostedDomain {
   #configuration = null;
   #baseUrl = "https://domains.ip2whois.com/domains";
@@ -2052,7 +2052,7 @@ export class HostedDomain {
     this.#configuration = config;
   }
 
-  // Query API to get geolocation information by IP address
+  // Query API to get hosted domain information by IP address
   lookup(myIP, page) {
     let data = {
       format: "json",

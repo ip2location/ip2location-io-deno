@@ -1,5 +1,8 @@
 name: Update Documentation
 
+permissions:
+  contents: write
+
 on:
   push:
     tags:

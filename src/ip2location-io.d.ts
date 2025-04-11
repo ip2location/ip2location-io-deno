@@ -88,7 +88,7 @@ export class HostedDomain {
      */
     constructor(config: any);
     /**
-     * Returns the object containing the geolocation data.
+     * Returns the object containing the hosted domain data.
      *
      * @param myIP The IP address to query.
      * @param page Pagination result returns of the hosted domains. If unspecified, 1st page will be used.
