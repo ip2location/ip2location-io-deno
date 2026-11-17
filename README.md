@@ -215,7 +215,7 @@ The SDK uses Deno's Node compatibility imports (`node:https` and `node:net`) and
 
 IP geolocation is **not GPS**. It estimates the location associated with an IP address and may not represent the device's precise physical position. VPNs, mobile networks, corporate gateways, and shared infrastructure can affect the results. Use geolocation and proxy intelligence as supporting signals, not definitive evidence of identity, location, or malicious activity.
 
-## Documentation and support
+## Documentation and Support
 
 - [Deno SDK quickstart](https://ip2location-io-deno.readthedocs.io/en/latest/quickstart.html)
 - [Deno SDK API reference](https://ip2location-io-deno.readthedocs.io/en/latest/code.html)
