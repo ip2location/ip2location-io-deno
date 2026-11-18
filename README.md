@@ -2,7 +2,7 @@
 
 The **IP2Location.io Deno SDK** lets Deno applications retrieve IPv4 and IPv6 geolocation, network, ASN, and available security intelligence through the [IP2Location.io API](https://www.ip2location.io/). It also provides domain WHOIS and hosted-domain lookup methods.
 
-**Quick links:** [Get an API key](https://www.ip2location.io/pricing) · [Developer documentation](https://ip2location-io-deno.readthedocs.io/en/latest/) · [API reference](https://ip2location-io-deno.readthedocs.io/en/latest/code.html) · [GitHub repository](https://github.com/ip2location/ip2location-io-deno)
+**Quick links:** [Get an API key](https://www.ip2location.io/pricing) · [Developer documentation](https://ip2location-io-deno.readthedocs.io/en/latest/) · [API reference](https://ip2location-io-deno.readthedocs.io/en/latest/code.html) 
 
 ## Features
 
@@ -55,7 +55,7 @@ import {
   IPGeolocation,
   DomainWhois,
   HostedDomain,
-} from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+} from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 ```
 
 Set your API key in the environment rather than embedding it in source code.
@@ -80,7 +80,7 @@ Create `main.ts`:
 import {
   Configuration,
   IPGeolocation,
-} from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+} from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 
 const apiKey = Deno.env.get("IP2LOCATION_API_KEY");
 if (!apiKey) throw new Error("Set IP2LOCATION_API_KEY first.");
