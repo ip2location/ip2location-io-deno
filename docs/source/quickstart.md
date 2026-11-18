@@ -9,7 +9,7 @@ This module requires API key to function. You may sign up for a free API key at 
 This module does not require any installation, you can import from Deno land like this:
 
 ```js
-import { Configuration, IPGeolocation, DomainWhois } from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+import { Configuration, IPGeolocation, DomainWhois } from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 ```
 
 ## Sample Codes
@@ -19,7 +19,7 @@ import { Configuration, IPGeolocation, DomainWhois } from "https://deno.land/x/i
 You can make a geolocation data lookup for an IP address as below:
 
 ```js
-import { Configuration, IPGeolocation } from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+import { Configuration, IPGeolocation } from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 
 // Configures IP2Location.io API key
 let mykey = "YOUR_API_KEY";
@@ -47,7 +47,7 @@ ipl.lookup(myip, lang)
 You can lookup domain information as below:
 
 ```js
-import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 
 // Configures IP2Location.io API key
 let mykey = "YOUR_API_KEY";
@@ -73,7 +73,7 @@ whois.lookup(mydomain)
 You can convert an international domain name to Punycode as below:
 
 ```js
-import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 
 let config = new Configuration();
 let whois = new DomainWhois(config);
@@ -87,7 +87,7 @@ console.log(whois.getPunycode("täst.de"));
 You can convert a Punycode to international domain name as below:
 
 ```js
-import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 
 let config = new Configuration();
 let whois = new DomainWhois(config);
@@ -101,7 +101,7 @@ console.log(whois.getNormalText("xn--tst-qla.de"));
 You can extract the domain name from an url as below:
 
 ```js
-import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 
 let config = new Configuration();
 let whois = new DomainWhois(config);
@@ -115,7 +115,7 @@ console.log(whois.getDomainName("https://www.example.com/exe"));
 You can extract the domain extension from a domain name or url as below:
 
 ```js
-import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+import { Configuration, DomainWhois } from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 
 let config = new Configuration();
 let whois = new DomainWhois(config);
@@ -129,7 +129,7 @@ console.log(whois.getDomainExtension("example.com"));
 You can get the domains hosted within the IP using following codes:
 
 ```js
-import { Configuration, HostedDomain } from "https://deno.land/x/ip2locationio@1.0.0/mod.ts";
+import { Configuration, HostedDomain } from "https://deno.land/x/ip2locationio@1.1.0/mod.ts";
 
 // Configures IP2Location.io API key
 let mykey = "YOUR_API_KEY";
